@@ -1,0 +1,30 @@
+{
+  "name": "action-controller",
+  "version": "1.0.0",
+  "description": "Minimal API gateway for forwarding action payloads to services",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "pm2:start": "pm2 start ecosystem.config.js",
+    "pm2:stop": "pm2 stop action-controller",
+    "pm2:restart": "pm2 restart action-controller",
+    "pm2:logs": "pm2 logs action-controller",
+    "pm2:status": "pm2 status"
+  },
+  "keywords": ["api-gateway", "action-controller"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1",
+    "pm2": "^5.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.3"
+  }
+}
